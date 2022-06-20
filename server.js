@@ -49,6 +49,7 @@ function handbrake_run(){
 				run_script("HandBrakeCLI", ["-i",origin,"-o",origin.replace('mkv', 'mp4')], function(output, exit_code) {
 				    videosRepo.update_status(id_doing, 2);
 				    console.log('acabou');
+				    running = false;
 				});
 			})
 		}else{
