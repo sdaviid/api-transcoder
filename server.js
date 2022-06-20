@@ -37,7 +37,7 @@ var id_doing_video = false;
 
 function handbrake_run(){
 	videosRepo.findByStatus(0).then(function(response){
-		if((running === false) && (response)){
+		if((running === false) && (response.length>0)){
 			let item = response[0];
 			running = true;
 			console.log(`initianting - ${item.id} - ${item.origin}`);
@@ -120,7 +120,7 @@ function run_script(command, args, callback) {
     child.stdout.on('data', function(data) {
     	last_message = data;
 
-        console.log('stdout: ' + data);
+        //console.log('stdout: ' + data);
 
         data=data.toString();
         scriptOutput+=data;
