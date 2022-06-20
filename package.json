@@ -1,0 +1,25 @@
+{
+  "name": "transcoder",
+  "version": "1.0.0",
+  "description": "api transcode videos using HandBrakeCLI",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdaviid/api-transcoder.git"
+  },
+  "author": "ds",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdaviid/api-transcoder/issues"
+  },
+  "homepage": "https://github.com/sdaviid/api-transcoder#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "express": "^4.18.1",
+    "sqlite3": "^5.0.8"
+  }
+}
